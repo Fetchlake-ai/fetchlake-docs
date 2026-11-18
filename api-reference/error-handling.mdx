@@ -95,7 +95,7 @@ Some errors include additional fields with context-specific information.
     "used": 500,
     "cap": 500
   },
-  "upgrade_url": "https://ardie.ai/billing"
+  "upgrade_url": "https://www.fetchlake.com/dashboard/subscription/plan"
 }
 ```
 
@@ -154,7 +154,7 @@ Some errors include additional fields with context-specific information.
 
 <CodeGroup>
 ```python Python
-class ArdieAPIError(Exception):
+class FetchlakeAPIError(Exception):
     def __init__(self, status_code, error_code, message):
         self.status_code = status_code
         self.error_code = error_code
@@ -170,7 +170,7 @@ def handle_response(response):
     except:
         error_data = {"error": "unknown", "message": response.text}
     
-    raise ArdieAPIError(
+    raise FetchlakeAPIError(
         status_code=response.status_code,
         error_code=error_data.get("error", "unknown"),
         message=error_data.get("message", "Unknown error")
@@ -179,7 +179,7 @@ def handle_response(response):
 # Usage
 try:
     result = handle_response(response)
-except ArdieAPIError as e:
+except FetchlakeAPIError as e:
     if e.error_code == "query_cap_exceeded":
         print("Please upgrade your plan to continue.")
     elif e.error_code == "rate_limit_exceeded":
@@ -189,7 +189,7 @@ except ArdieAPIError as e:
 ```
 
 ```javascript JavaScript
-class ArdieAPIError extends Error {
+class FetchlakeAPIError extends Error {
   constructor(statusCode, errorCode, message) {
     super(`${errorCode}: ${message}`);
     this.statusCode = statusCode;
@@ -209,7 +209,7 @@ async function handleResponse(response) {
     errorData = { error: 'unknown', message: response.statusText };
   }
   
-  throw new ArdieAPIError(
+  throw new FetchlakeAPIError(
     response.status,
     errorData.error || 'unknown',
     errorData.message || 'Unknown error'
@@ -220,7 +220,7 @@ async function handleResponse(response) {
 try {
   const result = await handleResponse(response);
 } catch (e) {
-  if (e instanceof ArdieAPIError) {
+  if (e instanceof FetchlakeAPIError) {
     if (e.errorCode === 'query_cap_exceeded') {
       console.log('Please upgrade your plan to continue.');
     } else if (e.errorCode === 'rate_limit_exceeded') {
@@ -235,7 +235,7 @@ try {
 
 ## Need Help?
 
-If you encounter persistent errors or unexpected behavior, contact support at [support@ardie.ai](mailto:support@ardie.ai) with:
+If you encounter persistent errors or unexpected behavior, contact support at [hello@fetchlake.com](mailto:hello@fetchlake.com) with:
 
 - The error code and message
 - Your request details (without the API key)

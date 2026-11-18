@@ -5,7 +5,7 @@ description: 'Understanding rate limits and usage caps'
 
 ## Two Types of Limits
 
-Ardie enforces two types of limits on API usage:
+Fetchlake enforces two types of limits on API usage:
 
 1. **Rate Limits** — Requests per minute
 2. **Usage Caps** — Total queries per billing period
@@ -79,7 +79,7 @@ When you hit your query cap:
     "used": 500,
     "cap": 500
   },
-  "upgrade_url": "https://ardie.ai/billing"
+  "upgrade_url": "https://www.fetchlake.com/dashboard/subscription/plan"
 }
 ```
 
@@ -91,7 +91,7 @@ import time
 import requests
 
 def query_with_retry(kb_id, query, api_key, max_retries=3):
-    url = f"https://api.ardie.ai/kb/{kb_id}/query"
+    url = f"https://api.fetchlake.com/kb/{kb_id}/query"
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
@@ -120,7 +120,7 @@ def query_with_retry(kb_id, query, api_key, max_retries=3):
 
 ```javascript JavaScript
 async function queryWithRetry(kbId, query, apiKey, maxRetries = 3) {
-  const url = `https://api.ardie.ai/kb/${kbId}/query`;
+  const url = `https://api.fetchlake.com/kb/${kbId}/query`;
   
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     const response = await fetch(url, {

@@ -1,17 +1,17 @@
 ---
 title: "API Keys"
-description: "How Ardie's scoped API keys work"
+description: "How Fetchlake's scoped API keys work"
 ---
 
 ## How API Keys Work
 
-When you purchase access to a knowledge base, Ardie issues you a **scoped API key**. This key is your credential for querying that specific knowledge base via the API.
+When you purchase access to a knowledge base, Fetchlake issues you a **scoped API key**. This key is your credential for querying that specific knowledge base via the API.
 
 ## Key Principles
 
 <CardGroup cols={1}>
-  <Card title="Ardie-Issued" icon="shield-check">
-    All API keys are issued by Ardie. You never receive supplier infrastructure keys or direct access to publisher systems.
+  <Card title="Fetchlake-Issued" icon="shield-check">
+    All API keys are issued by Fetchlake. You never receive supplier infrastructure keys or direct access to publisher systems.
   </Card>
   <Card title="Scoped Access" icon="lock">
     Each key grants access to exactly one knowledge base. If you purchase access to multiple knowledge bases, you'll have separate keys for each.
@@ -26,17 +26,14 @@ When you purchase access to a knowledge base, Ardie issues you a **scoped API ke
 Your API key will look something like:
 
 ```
-ardie_sk_live_abc123xyz789...
+ak_3f9c1e7a52d84b06...
 ```
 
-The prefix indicates:
-- `ardie_` — Issued by Ardie
-- `sk_` — Secret key (keep confidential)
-- `live_` — Production key (vs `test_` for sandbox)
+Keys start with `ak_` followed by 64 random characters. Treat the whole key as a secret: anyone who has it can use your access.
 
 ## Managing Your Keys
 
-Access your API keys from the [Dashboard](https://ardie.ai/dashboard). For each key, you can see:
+Access your API keys from the [Dashboard](https://www.fetchlake.com/dashboard). For each key, you can see:
 
 | Field | Description |
 |-------|-------------|
@@ -55,7 +52,7 @@ Access your API keys from the [Dashboard](https://ardie.ai/dashboard). For each 
   <Step title="Use Environment Variables">
     Store your API key in environment variables, not in code:
     ```bash
-    export ARDIE_API_KEY="ardie_sk_live_..."
+    export FETCHLAKE_API_KEY="ak_..."
     ```
   </Step>
   <Step title="Rotate Keys Periodically">

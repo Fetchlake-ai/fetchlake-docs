@@ -1,28 +1,28 @@
 ---
 title: 'API Introduction'
-description: 'Learn how to integrate with the Ardie API'
+description: 'Learn how to integrate with the Fetchlake API'
 ---
 
 ## Overview
 
-The Ardie API allows you to query knowledge bases programmatically. All interactions happen through REST endpoints using JSON payloads.
+The Fetchlake API allows you to query knowledge bases programmatically. All interactions happen through REST endpoints using JSON payloads.
 
 **Base URL:**
 ```
-https://api.ardie.ai
+https://api.fetchlake.com
 ```
 
 ## How API Exchange Works
 
-Ardie acts as a secure intermediary between you and knowledge base publishers:
+Fetchlake acts as a secure intermediary between you and knowledge base publishers:
 
 1. You purchase access to a knowledge base through the marketplace
-2. Ardie issues you a **scoped API key** for that specific knowledge base
-3. You use the key to query the knowledge base via the Ardie API
-4. Ardie routes your query to the publisher's infrastructure and returns the response
+2. Fetchlake issues you a **scoped API key** for that specific knowledge base
+3. You use the key to query the knowledge base via the Fetchlake API
+4. Fetchlake routes your query to the publisher's infrastructure and returns the response
 
 <Info>
-  **Key principle:** Buyers never receive supplier infrastructure keys. All keys are Ardie-issued, scoped, and revocable.
+  **Key principle:** Buyers never receive supplier infrastructure keys. All keys are Fetchlake-issued, scoped, and revocable.
 </Info>
 
 ## Available Endpoints
@@ -35,7 +35,7 @@ Ardie acts as a secure intermediary between you and knowledge base publishers:
 ## Quick Example
 
 ```bash
-curl -X POST https://api.ardie.ai/kb/{kb_id}/query \
+curl -X POST https://api.fetchlake.com/kb/{kb_id}/query \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{"query": "What are the key curriculum standards for grade 5 math?"}'

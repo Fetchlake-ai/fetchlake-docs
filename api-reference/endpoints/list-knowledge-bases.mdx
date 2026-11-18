@@ -7,7 +7,7 @@ api: 'GET /api/marketplace/knowledge-bases'
 ## Endpoint
 
 ```
-GET https://api.ardie.ai/api/marketplace/knowledge-bases
+GET https://api.fetchlake.com/api/marketplace/knowledge-bases
 ```
 
 <Note>
@@ -44,14 +44,14 @@ GET https://api.ardie.ai/api/marketplace/knowledge-bases
 
 <CodeGroup>
 ```bash cURL
-curl "https://api.ardie.ai/api/marketplace/knowledge-bases?query=education&category=education&sort=popular&page=1&pageSize=12"
+curl "https://api.fetchlake.com/api/marketplace/knowledge-bases?query=education&category=education&sort=popular&page=1&pageSize=12"
 ```
 
 ```python Python
 import requests
 
 response = requests.get(
-    "https://api.ardie.ai/api/marketplace/knowledge-bases",
+    "https://api.fetchlake.com/api/marketplace/knowledge-bases",
     params={
         "query": "education",
         "category": "education",
@@ -76,7 +76,7 @@ const params = new URLSearchParams({
 });
 
 const response = await fetch(
-  `https://api.ardie.ai/api/marketplace/knowledge-bases?${params}`
+  `https://api.fetchlake.com/api/marketplace/knowledge-bases?${params}`
 );
 
 const data = await response.json();

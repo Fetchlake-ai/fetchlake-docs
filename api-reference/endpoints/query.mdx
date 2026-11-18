@@ -7,7 +7,7 @@ api: 'POST /kb/{kb_id}/query'
 ## Endpoint
 
 ```
-POST https://api.ardie.ai/kb/{kb_id}/query
+POST https://api.fetchlake.com/kb/{kb_id}/query
 ```
 
 ## Path Parameters
@@ -36,8 +36,8 @@ POST https://api.ardie.ai/kb/{kb_id}/query
 
 <CodeGroup>
 ```bash cURL
-curl -X POST https://api.ardie.ai/kb/kb_edu_123/query \
-  -H "Authorization: Bearer ardie_sk_live_abc123" \
+curl -X POST https://api.fetchlake.com/kb/kb_edu_123/query \
+  -H "Authorization: Bearer ak_abc123" \
   -H "Content-Type: application/json" \
   -d '{
     "query": "What are the key curriculum standards for grade 5 math?"
@@ -48,9 +48,9 @@ curl -X POST https://api.ardie.ai/kb/kb_edu_123/query \
 import requests
 
 response = requests.post(
-    "https://api.ardie.ai/kb/kb_edu_123/query",
+    "https://api.fetchlake.com/kb/kb_edu_123/query",
     headers={
-        "Authorization": "Bearer ardie_sk_live_abc123",
+        "Authorization": "Bearer ak_abc123",
         "Content-Type": "application/json"
     },
     json={
@@ -63,10 +63,10 @@ print(data["answer"])
 ```
 
 ```javascript JavaScript
-const response = await fetch('https://api.ardie.ai/kb/kb_edu_123/query', {
+const response = await fetch('https://api.fetchlake.com/kb/kb_edu_123/query', {
   method: 'POST',
   headers: {
-    'Authorization': 'Bearer ardie_sk_live_abc123',
+    'Authorization': 'Bearer ak_abc123',
     'Content-Type': 'application/json'
   },
   body: JSON.stringify({
