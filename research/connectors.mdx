@@ -1,0 +1,42 @@
+---
+title: "Connectors"
+description: "Bring PDFs in from Zotero or Google Drive and keep them in sync."
+icon: "plug"
+---
+
+Connectors copy PDFs from somewhere you already keep them into a Fetchlake collection. They're in **Dashboard → Tools → Connectors** and need a paid plan.
+
+## Zotero
+
+<Steps>
+  <Step title="Create a Zotero API key">
+    In Zotero, go to **Settings → Security → Applications** and create a key. It needs **read/write** access, because Fetchlake writes references back to your Zotero library when you add papers from other sources. Include group libraries if you need them.
+  </Step>
+  <Step title="Add the credential">
+    In **Connectors**, choose **New Zotero credential** and enter your **Library ID**, the **Library type** (personal or group) and the key. The label is just for you, for example "Thesis library".
+  </Step>
+  <Step title="Sync into a collection">
+    Open the collection and choose a Zotero collection to sync. Fetchlake pulls in the PDFs attached to its items and processes them.
+  </Step>
+</Steps>
+
+Leave the key field blank when editing a credential to keep the existing key.
+
+## Google Drive
+
+<Steps>
+  <Step title="Connect Drive">
+    Choose **Connect Drive** and sign in with Google. Fetchlake only asks for read-only access to your Drive.
+  </Step>
+  <Step title="Pick a folder">
+    From a collection, choose the Drive folder to sync. The PDFs in it are copied in and processed.
+  </Step>
+</Steps>
+
+If a sync stops working, use **Re-authorise** to refresh the Google sign-in.
+
+## Tips
+
+- Sync a single Zotero collection or Drive folder per Fetchlake collection, so the two stay matched.
+- Your credentials are stored encrypted and are never shown again after you save them.
+- Items without a PDF come in as **Reference only**. Attach the file in Zotero and sync again.

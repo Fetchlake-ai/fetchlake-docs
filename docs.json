@@ -11,13 +11,23 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Fetchlake Research",
         "groups": [
           {
             "group": "Getting Started",
             "pages": [
               "index",
               "quickstart"
+            ]
+          },
+          {
+            "group": "Fetchlake Research",
+            "pages": [
+              "research/overview",
+              "research/library",
+              "research/collections",
+              "research/citations-and-map",
+              "research/connectors"
             ]
           },
           {
@@ -40,6 +50,49 @@
             "group": "Resources",
             "pages": [
               "resources"
+            ]
+          }
+        ],
+        "icon": "book-open"
+      },
+      {
+        "tab": "Huxley",
+        "icon": "filter",
+        "groups": [
+          {
+            "group": "Huxley",
+            "pages": [
+              "huxley/overview"
+            ]
+          },
+          {
+            "group": "Using Huxley",
+            "pages": [
+              "huxley/projects-and-import",
+              "huxley/criteria",
+              "huxley/screening",
+              "huxley/ai-screening",
+              "huxley/review-and-export"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Insights",
+        "icon": "chart-line",
+        "groups": [
+          {
+            "group": "Fetchlake Insights",
+            "pages": [
+              "insights/overview",
+              "insights/how-we-test"
+            ]
+          },
+          {
+            "group": "Tools and research",
+            "pages": [
+              "insights/research",
+              "insights/calculators"
             ]
           }
         ]
@@ -68,7 +121,8 @@
               "api-reference/error-handling"
             ]
           }
-        ]
+        ],
+        "icon": "code"
       }
     ],
     "global": {

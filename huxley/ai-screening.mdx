@@ -1,0 +1,50 @@
+---
+title: "AI screening"
+description: "Let Huxley AI screen records against your criteria."
+icon: "robot"
+---
+
+Open the **Huxley AI Screening** panel from your project. Huxley reads each record's title and abstract, compares it with your [criteria](/huxley/criteria), and records a decision, a confidence score and its reasoning.
+
+## Running a batch
+
+<Steps>
+  <Step title="Check your criteria">
+    The panel shows the **current criteria**. They're saved as a new version when the run starts.
+  </Step>
+  <Step title="Choose the scope">
+    - **Screen current filtered records**: only the records matching the filters in your screening view.
+    - **Screen all pending articles**: every record that has no decision yet.
+  </Step>
+  <Step title="Set the output options">
+    - **Allow "Maybe" decisions** (recommended for uncertain cases). Set the **confidence threshold for Include**. Below it, the AI says Maybe instead of Include.
+    - **Skip already screened by Huxley**, so you don't pay twice for records the AI has done.
+  </Step>
+  <Step title="Start and watch">
+    Progress and an **activity log** update as records are screened. You can stop a run part-way. Decisions made so far are kept.
+  </Step>
+</Steps>
+
+## What you get for each record
+
+- **Decision**: Include, Exclude or Maybe
+- **Confidence**: how sure the AI is, from 0 to 100%
+- **AI reasoning**: a short explanation linked to your criteria
+
+## Protecting your own decisions
+
+<Warning>
+An AI run screens **every** record in its scope and replaces any decision already there, including ones you made by hand. To keep your manual decisions, use **Screen all pending articles**, or set the decision filter to **Pending** before choosing **Screen current filtered records**.
+</Warning>
+
+After the run you can still change any AI decision yourself. See [Review and export](/huxley/review-and-export).
+
+## Tips
+
+- Start with a small filtered batch (say 50 records), compare it with your own decisions, and adjust the criteria wording before running everything.
+- A threshold of 70–80% for Include is a sensible starting point. Raise it if too many weak papers get through.
+- Read the reasoning on a few exclusions. If the AI keeps misreading one criterion, reword that criterion.
+
+<Note>
+Coming soon: AI screening charged to your Fetchlake credits, with a choice of a faster or a more accurate model, and the option to use your own AI key on paid plans.
+</Note>

@@ -1,0 +1,78 @@
+---
+title: "Library"
+description: "Add papers, find them again, read them and check what was extracted."
+icon: "books"
+---
+
+The Library (**Dashboard → Library**) works like a reference manager. On the left is the list of collections, in the middle the list of items, and on the right the details of whichever item you've selected.
+
+## Layout
+
+| Area | What it does |
+|---|---|
+| **Sidebar** | **My Library** shows everything; click a collection to show only its items. |
+| **Item list** | One row per paper. Click a row to see its details on the right. Double-click to open the reader. |
+| **Item pane** | The paper's details, its extracted study record and its citations. |
+| **View switch** | Switch between **Items**, **Citations** and **Map**. See [Citations and Map](/research/citations-and-map). |
+
+## Adding papers
+
+<Steps>
+  <Step title="Pick a collection">
+    Choose the **Collection for new files**. Every file has to go into a collection.
+  </Step>
+  <Step title="Add the files">
+    Drag PDFs anywhere onto the list, or use **Add files**. Each upload shows its progress.
+  </Step>
+  <Step title="Wait for processing">
+    Each item's status updates on its own. You can keep working while files process.
+  </Step>
+</Steps>
+
+You can also bring papers in from [Zotero or Google Drive](/research/connectors).
+
+### Item statuses
+
+| Status | Meaning |
+|---|---|
+| **Processing** | The PDF is being read and indexed. |
+| **Extracting** | The AI is filling in the study record. |
+| **Needs review** | Extraction finished. Check it against the paper. |
+| **Ready** | Processed and reviewed. |
+| **Reference only** | A reference with no file attached (for example, from an RIS import). |
+| **Not extracted** | Indexed, but the study record hasn't been filled in. |
+| **Failed** / **Extraction failed** | Something went wrong. Try the file again, or check it isn't a scanned image with no text. |
+
+## Finding papers
+
+- **Search** matches title, author, year and DOI.
+- **Filter** by article type (research article, review, theoretical, policy, grey literature) and by status.
+
+## The item pane
+
+### Details
+Title, authors, publication, year, volume, issue, pages, DOI, keywords and abstract. Edit anything that's wrong. Good details give you better citations and exports.
+
+### Study record (extraction)
+Fetchlake reads the paper and fills in a structured record. The fields depend on the article type. For a research article they include:
+
+- Study design, methods, setting, country, population and sample size
+- Intervention or exposure, and comparison
+- **Outcomes**: each with its measure, timepoint, result, effect size and significance
+- Main findings, limitations and a summary
+
+**Re-extract** runs the AI again. It uses credits, so correct small mistakes by hand instead.
+
+<Warning>
+Extraction is a starting point, not a final answer. Always check effect sizes, sample sizes and significance against the paper before you rely on them.
+</Warning>
+
+## The reader
+
+Double-click an item (or use **Read the document with its details and notes**) to open the reader: the item's details on the left, the PDF in the centre and your notes underneath. Notes save automatically.
+
+## Tips
+
+- Fill in **article type** first. It decides which extraction fields you see.
+- Sort the list by status and work through **Needs review** items in one go.
+- If a PDF won't read, it's usually a scan. Run it through OCR and upload it again.

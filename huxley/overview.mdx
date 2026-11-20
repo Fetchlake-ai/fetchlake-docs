@@ -1,0 +1,57 @@
+---
+title: "Huxley"
+description: "Title and abstract screening for systematic reviews, with an AI that screens alongside you."
+icon: "filter"
+---
+
+Huxley helps you get through the screening stage of a systematic or scoping review. You import search results, write down your inclusion and exclusion criteria, screen with keyboard shortcuts, and let **Huxley AI** take a first pass at the rest. Then you check its decisions and export what you've included.
+
+Huxley uses your Fetchlake account. Open it from **Dashboard → Systematic Review**, or choose **Continue with Fetchlake** on the Huxley sign-in page.
+
+## The workflow
+
+<Steps>
+  <Step title="Import your search results" icon="file-import">
+    Create a project and upload the RIS file from your database search. [Projects and import →](/huxley/projects-and-import)
+  </Step>
+  <Step title="Write your criteria" icon="list-check">
+    Set what must be included or excluded, using keywords or Boolean rules. [Criteria →](/huxley/criteria)
+  </Step>
+  <Step title="Screen" icon="keyboard">
+    Make include, exclude or maybe decisions one article at a time. [Screening →](/huxley/screening)
+  </Step>
+  <Step title="Run Huxley AI" icon="robot">
+    Let the AI screen the remaining records against your criteria, with a reason and confidence for each. [AI screening →](/huxley/ai-screening)
+  </Step>
+  <Step title="Review and export" icon="file-export">
+    Check AI decisions, override where you disagree, and export the result as RIS. [Review and export →](/huxley/review-and-export)
+  </Step>
+</Steps>
+
+## Decision types
+
+| Decision | Meaning |
+|---|---|
+| ✓ **Include** | Meets your criteria. Goes forward to full-text review. |
+| ✗ **Exclude** | Doesn't meet your criteria. |
+| ? **Maybe** | Can't tell from the title and abstract. Check the full text. |
+| ○ **Pending** | Not screened yet. |
+
+Every decision records who made it: **manual** (you) or **Huxley** (the AI), so you can always filter to check the AI's work.
+
+## Using Huxley well
+
+<AccordionGroup>
+  <Accordion title="Screen a sample yourself first">
+    Screen 50–100 records by hand before running the AI. It shows you whether your criteria are clear, and gives you something to check the AI's decisions against.
+  </Accordion>
+  <Accordion title="Write criteria the AI can apply">
+    Be specific: "randomised controlled trials in adults aged 18+" works better than "good quality studies". The AI only sees the title and abstract, so criteria that need the full text belong at the next stage.
+  </Accordion>
+  <Accordion title="Treat the AI as a second screener, not the only one">
+    Review every AI exclusion with low confidence, and spot-check a sample of the confident ones. Report in your methods that AI-assisted screening was used and how it was checked.
+  </Accordion>
+  <Accordion title="Lean towards Maybe">
+    Turn on **Maybe** decisions for the AI. Sending a borderline paper to full-text review costs a few minutes. Wrongly excluding a relevant paper weakens the review.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,35 @@
+---
+title: "Criteria"
+description: "Define what gets a paper in or out."
+icon: "list-check"
+---
+
+Criteria are the rules you screen against. Huxley uses them in two places: to highlight matching words while you screen, and as the instructions Huxley AI follows.
+
+## Adding a criterion
+
+Each criterion has:
+
+| Field | Options |
+|---|---|
+| **Type** | **Inclusion** or **Exclusion** |
+| **Rule** | **Must Include**: the record must mention one of the keywords. **Must Exclude**: a match rules it out. **Boolean Expression**: a full rule with `AND`, `OR`, `NOT` and brackets. |
+| **Keywords** | Comma-separated words or phrases (for Must Include / Must Exclude). |
+| **Description** | Plain-English explanation. This is what the AI reads most closely. |
+
+### Boolean example
+
+```text
+(child* OR adolescen* OR "young people") AND (anxiety OR depress*) NOT (rat OR mice)
+```
+
+## Versions
+
+Every time you run Huxley AI, the current criteria are saved as a **version**. Each AI decision is linked to the version used, so if you change your criteria part-way through you can still tell which decisions were made under which rules.
+
+## Writing good criteria
+
+- Write one criterion per idea: population, intervention or exposure, comparison, outcome, study design (PICO/PECO).
+- Say what to do with edge cases, for example "conference abstracts: exclude" or "mixed adult and child samples: include if results are reported separately".
+- Keep the wording the same as your protocol, so your review can be checked against it.
+- If you change criteria after screening has started, re-check the decisions made under the older version.

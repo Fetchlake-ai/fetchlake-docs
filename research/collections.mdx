@@ -1,0 +1,33 @@
+---
+title: "Collections"
+description: "Group papers by project, and control who can see them."
+icon: "folder-open"
+---
+
+A **collection** is a group of documents that Fetchlake searches together. It's the unit you query through the API, and the scope for the citation and map views.
+
+## Create a collection
+
+From the Dashboard, choose **Create Collection**, give it a name and description, then add files from the [Library](/research/library) or a [connector](/research/connectors).
+
+## Manage a collection
+
+**Dashboard → Collections** → choose a collection to open its settings:
+
+| Setting | What it's for |
+|---|---|
+| **Name, description, long description** | What the collection covers. Shown to anyone who can see it. |
+| **Category and tags** | Help people find public collections. |
+| **Visibility** | **Public** or **Private**. Free plans can only create public collections. |
+| **Maintainer, contact URL, update cadence** | Who looks after it and how often it changes. |
+| **Cover image and logo** | How it looks in listings. |
+| **Use cases and licence notes** | How others may use the content. |
+| **Retrieval** | Advanced: how many passages (**Top K chunks**) are pulled into an answer, and the **temperature** for generated answers. |
+| **Documents** | View, edit details for, or remove the files in the collection. |
+
+## Tips
+
+- **Private by default** for unpublished or licensed material. Check visibility before you add anything sensitive.
+- A small, focused collection usually gives better answers than one large mixed one.
+- Leave the **Retrieval** settings alone unless answers are missing context (raise Top K) or wander (lower temperature).
+- To share a collection with others, see [Marketplace](/marketplace/browsing). To query it from your own code, see the [API Reference](/api-reference/introduction).
